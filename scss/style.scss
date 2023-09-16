@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+// color variables
+$white: #FFFFFF;
+$black: #1C1C1C;
+$orange: #e27866;
+$green: #41d395;
+
+// font variables
+$font: 'Montserrat';
+$regular: 400;
+$semibold: 600;
+
+@mixin flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+body {
+  background: $black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 100px;
+  width: 100%;
+  height: 72px;
+
+  nav a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.section-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 81.5vh;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/section-1.png) no-repeat center / cover;
+    opacity: 0.63;
+    z-index: -1;
+  }
+
+  .content {
+    box-sizing: content-box;
+    width: 40%;
+    height: 425px;
+    background: rgba($color: #1900ff, $alpha: 0.3);
+  }
+
+  .sign-in {
+    display: flex;
+    flex-direction: column;
+    height: 425px;
+    border-radius: 5px;
+    width: 360px;
+    background: $white;
+
+    .wrapper {
+      padding: 30px 50px;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 0 0 50px;
+      font-size: 1.25rem;
+      border-radius: 5px 5px 0 0;
+      width: 100%;
+      height: 57px;
+      background: #F5F5F5;
+
+      span {
+        color: $orange;
+        padding: 0 6px;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 25px 10px 5px 10px;
+      border: none;
+      border-bottom: 1px solid #D8D8D8;
+      opacity: 0.5;
+
+      &::placeholder {
+        opacity: 0.4;
+      }
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    .type {
+      padding-top: 29px;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 20px 0 10px 0;
+
+      input {
+        width: 12px;
+        accent-color: #2fa373;
+      }
+
+      label {
+        margin-right: 10px;
+        font-size: 9px;
+        font-weight: $semibold;
+      }
+    }
+
+    a {
+      @include flex-centered;
+      font-weight: $semibold;
+      text-decoration: none;
+      font-size: 1.125rem;
+      color: $white;
+      border-radius: 0 0 5px 5px;
+      width: 100%;
+      height: 57px;
+      background: $green;
+    }
+  }
+}
+
+.section-1-footer {
+  height: 105px;
+  background: $white;
+}
