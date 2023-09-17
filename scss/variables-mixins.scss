@@ -1,0 +1,16 @@
+// color variables
+$white: #FFFFFF;
+$black: #1C1C1C;
+$orange: #e27866;
+$green: #41d395;
+
+// font variables
+$font: 'Montserrat';
+$regular: 400;
+$semibold: 600;
+
+@mixin flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
