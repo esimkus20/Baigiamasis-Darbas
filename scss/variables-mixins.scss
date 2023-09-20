@@ -14,3 +14,9 @@ $semibold: 600;
   align-items: center;
   justify-content: center;
 }
+
+@mixin flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
