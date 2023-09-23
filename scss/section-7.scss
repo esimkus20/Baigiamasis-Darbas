@@ -1,0 +1,75 @@
+.section-7 {
+  height: 573px;
+  background: $orange;
+  @include flex-centered;
+
+  div {
+    @include flex-centered;
+    flex-direction: column;
+    gap: 50px;
+
+    h1 {
+      color: $white;
+      font-size: 36px;
+    }
+
+    p {
+      color: $white;
+      font-size: 14px;
+    }
+
+    form {
+      @include flex-centered;
+      flex-direction: column;
+      width: 390px;
+      height: 314px;
+      padding: 0 60px;
+      background: $white;
+      border-radius: 5px;
+
+      input {
+        width: 100%;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        margin-top: 30px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid black;
+
+        &::placeholder {
+          font-size: 12px;
+          color: $black;
+        }
+      }
+
+      .type {
+        display: block;
+        width: 100%;
+        padding-left: 10px;
+        margin-bottom: 50px;
+        flex-direction: row;
+
+        input {
+          width: 12px;
+          accent-color: #2fa373;
+        }
+
+        label {
+          font-size: 9px;
+          font-weight: $semibold;
+        }
+      }
+
+      button {
+        color: $white;
+        background: $green;
+        border: none;
+        font-weight: $semibold;
+        font-size: 15px;
+        border-radius: 5px;
+        width: 158px;
+        height: 48px;
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.section-5 {
+  height: 883px;
+  background: #6696E2;
+  @include flex-centered;
+
+  div {
+    @include flex-centered;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 80%;
+
+    .title {
+      h1 {
+        font-size: 36px;
+        color: $white;
+      }
+
+      hr {
+        border-color: #41D395;
+        margin: 25px 0;
+      }
+
+      p {
+        color: $white;
+        font-size: 14px;
+      }
+    }
+    
+    .prices {
+      @include flex-centered;
+      flex-direction: row;
+      gap: 40px;
+      width: 100%;
+
+      .content {
+        justify-content: flex-end;
+        width: 343px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .space, 
+        .space-middle {
+          background: #41D395;
+          width: 100%;
+          height: 6px;
+        }
+
+        .space-middle {
+          @include flex-centered;
+          color: $white;
+          height: 40px;
+          font-size: 14px;
+        }
+
+        .header {
+          @include flex-centered;
+          background: $black;
+          border-radius: 5px 5px 0 0;
+          color: $white;
+          width: 100%;
+          height: 210px;
+
+          h1 {
+            font-size: 94px;
+            font-weight: $regular;
+
+            span {
+              font-size: 40px;
+            }
+          }
+
+          h2 {
+            font-weight: $regular;
+            font-size: 20px;
+          }
+
+          h3 {
+            font-weight: $regular;
+            font-size: 14px;
+            opacity: 0.5;
+          }
+        }
+
+        .features {
+          width: 100%;
+          background: $white;
+          border-radius: 0 0 5px 5px;
+          color: #86878B;
+          font-size: 14px;
+          line-height: 40px;
+          height: 240px;
+        }
+      }
+    }
+  }
+}

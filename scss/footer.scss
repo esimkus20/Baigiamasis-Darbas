@@ -1,0 +1,22 @@
+footer {
+  height: 123px;
+  background: $black;
+  @include flex-centered;
+
+  div {
+    @include flex-space-between;
+
+    .social-icons {
+      width: 600px;
+      font-size: 25px;
+      color: $orange;
+      cursor: pointer;
+    }
+
+    p {
+      color: $white;
+      font-size: 18px;
+      opacity: 0.5;
+    }
+  }
+}

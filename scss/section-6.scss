@@ -1,0 +1,83 @@
+.section-6 {
+  @include flex-centered;
+  height: 591px;
+  background: $white;
+
+  div {
+    @include flex-space-between;
+    height: 80%;
+    flex-direction: column;
+
+    h1 {
+      font-size: 36px;
+    }
+
+    hr {
+      border-color: #6696E2;
+      margin: 25px 0 50px 0;
+    }
+
+    .all-feedbacks {
+      @include flex-space-between;
+      align-items: flex-end;
+      width: 100%;
+      height: auto;
+      flex-direction: row;
+
+      .feedback {
+        width: 273px;
+        height: auto;
+        
+        .comment {
+          background: #6696E2;
+          border-radius: 8px;
+          padding: 20px;
+
+          p {
+            color: $white;
+            line-height: 22px;
+          }
+        }
+        
+        .profile {
+          width: 100%;
+          flex-direction: row;
+
+          .img {
+            width: 100px;
+            height: 100px;
+            background: url(../images/section-6-avatar.png) no-repeat center / contain;
+            margin-right: 15px;
+            position: relative;
+
+            &::before {
+              content: "";
+              top: -5px;
+              border: 15px solid transparent;
+              border-top-color: #6696E2;
+              position: absolute;
+
+            }
+          }
+
+          .info {
+            width: 100%;
+            height: 20%;
+            align-items: flex-start;
+
+            h2 {
+              font-size: 20px;
+              font-weight: $regular;
+              margin-bottom: 5px;
+            }
+
+            p {
+              font-size: 14px;
+              color: #86878B;
+            }
+          }
+        }
+      }
+    }
+  }
+}
