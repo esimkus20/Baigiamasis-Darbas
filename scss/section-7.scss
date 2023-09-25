@@ -16,6 +16,7 @@
     p {
       color: $white;
       font-size: 14px;
+      margin-bottom: -20px
     }
 
     form {
@@ -34,29 +35,68 @@
         padding-left: 10px;
         margin-top: 30px;
         padding-bottom: 2px;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        opacity: 0.8;
 
         &::placeholder {
           font-size: 12px;
           color: $black;
+          opacity: 0.6;
         }
       }
 
       .type {
+        padding: 25px 0 35px 0;
         display: block;
         width: 100%;
         padding-left: 10px;
-        margin-bottom: 50px;
-        flex-direction: row;
 
-        input {
+        input[type="radio"] {
+          cursor: $cursor;
+          appearance: none;
           width: 12px;
-          accent-color: #2fa373;
+          margin: 0;
+          height: 12px;
+          border-radius: 50%;
+          border: 1px solid $green;
+          margin-right: 5px;
+          position: relative;
+          transition: 0.3s;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background: $green;
+            border-radius: 80%;
+            transform: scale(0);
+            transition: 0.3s;
+          }
+
+          &:checked::before {
+            transform: scale(1);
+            opacity: 1;
+          }
+
+          &:checked + label {
+            opacity: 1;
+          }
         }
 
         label {
+          cursor: $cursor;
+          margin-right: 15px;
           font-size: 9px;
           font-weight: $semibold;
+          opacity: 0.5;
+          vertical-align: middle;
+          transition: 0.3s
         }
       }
 
@@ -67,8 +107,10 @@
         font-weight: $semibold;
         font-size: 15px;
         border-radius: 5px;
+        margin-bottom: 25px;
         width: 158px;
         height: 48px;
+        cursor: $cursor;
       }
     }
   }

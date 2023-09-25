@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <!-- Title -->
@@ -14,13 +16,13 @@
   
   <nav>
     <div class="wrapper">
-      <img src="app/svgs/navbar.svg" alt="Cheshire Country Logo">
+      <a href="#"><img src="app/svgs/navbar.svg" alt="Cheshire Country Logo"></a>
       <ul>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Reviews</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -65,12 +67,12 @@
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-pinterest-p"></i>
-        <i class="fa-solid fa-rss"></i>
+        <i><img width="30px" height="30px" src="app/images/wifi-icon.png" alt=""></i>
       </div>
     </div>
   </footer>
 
-  <section class="section-2">
+  <section id="features" class="section-2">
     <div class="wrapper">
       <div class="grid-1">
         <div><p>REGISTER</p></div>
@@ -109,7 +111,7 @@
     </div>
   </section>
 
-  <section class="section-3">
+  <section id="about" class="section-3">
     <div class="wrapper">
       <div class="half">
         <img src="app/svgs/section-3.svg" alt="logo">
@@ -174,7 +176,7 @@
     </div>
   </section>
 
-  <section class="section-5">
+  <section id="pricing" class="section-5">
     <div class="wrapper">
       <div class="title">
         <h1>PRICING OPTIONS</h1>
@@ -234,11 +236,81 @@
     </div>
   </section>
 
-  <section class="section-6">
+  <section id="reviews" class="section-6">
     <div class="wrapper">
       <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
       <hr width="60px">
-      <div class="all-feedbacks">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>Jeremy H.</h2>
+                  <p>Manager</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>John S.</h2>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>Susan W.</h2>
+                  <p>Photographer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>John S.</h2>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </div>
+      <!-- <div class="all-feedbacks">
         <div class="feedback">
           <div class="comment">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
@@ -275,11 +347,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
-  <section class="section-7">
+  <section id="contact" class="section-7">
     <div class="wrapper">
       <h1>CONTACT US</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -305,11 +377,13 @@
         <i class="fa-brands fa-instagram"></i>
         <i class="fa-brands fa-twitter"></i>
         <i class="fa-brands fa-pinterest-p"></i>
-        <i class="fa-solid fa-rss"></i>
+        <i><img width="20px" height="20px" src="app/images/wifi-icon.png" alt=""></i>
       </div>
       <p>© 2019 Cheshire County</p>
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
 </body>
 </html>

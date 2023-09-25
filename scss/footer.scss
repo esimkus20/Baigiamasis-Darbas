@@ -10,7 +10,10 @@ footer {
       width: 600px;
       font-size: 25px;
       color: $orange;
-      cursor: pointer;
+
+      i {
+        cursor: $cursor;
+      }
     }
 
     p {

@@ -34,11 +34,13 @@
       div {
         @include flex-centered;
         background: #A37169;
+        cursor: $cursor;
         font-size: 14px;
         color: $white;
         width: 100px;
         height: 100px;
         box-shadow: 0px 3px 6px #00000029;
+        transition: 0.3s;
 
         &:hover {
           background: #E27866;
@@ -51,6 +53,7 @@
         p {
           transform: rotate(-45deg);
           opacity: 0.5;
+          transition: 0.3s;
         }
       }
     }
@@ -82,13 +85,16 @@
       img {
         zoom: 10px;
         transition: 0.5s ease;
+        cursor: $cursor;
+        width: 100%;
       }
 
       .container,
       .container-2 {
         position: relative;
         opacity: 0.8;
-        width: 110%;
+        width: 100%;
+        background: $orange;
 
         &:hover img {
           opacity: 0.3;
@@ -96,11 +102,12 @@
 
         &:hover .middle {
           opacity: 1;
+          cursor: $cursor;
         }
       }
 
       .container-2 {
-        width: 226%;
+        width: 217%;
       }
 
       .middle {

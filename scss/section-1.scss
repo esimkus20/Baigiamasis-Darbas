@@ -1,6 +1,8 @@
 .section-1 {
   @include flex-centered;
   position: relative;
+  box-sizing: content-box;
+  padding: 105.5px;
   height: 639px;
 
   &::before {
@@ -43,7 +45,7 @@
       button {
         height: 42px;
         width: 135px;
-        cursor: pointer;
+        cursor: $cursor;
         color: $white;
         background: none;
         border: 2px solid $white;
@@ -85,10 +87,15 @@
         input {
           padding: 25px 10px 5px 10px;
           border: none;
+          outline: none;
           width: 100%;
           border-bottom: 1px solid #D8D8D8;
           opacity: 0.5;
 
+          &:focus {
+            opacity: 1;
+          }
+          
           &::placeholder {
             opacity: 0.4;
           }
@@ -104,16 +111,51 @@
 
         .type-of-subscription {
 
-          input {
+          input[type="radio"] {
+            cursor: $cursor;
+            appearance: none;
+            padding: 0;
             width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: 1px solid $green;
             margin-right: 5px;
-            accent-color: #2fa373;
+            position: relative;
+            transition: 0.3s;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              margin: auto;
+              background: $green;
+              border-radius: 80%;
+              transform: scale(0);
+              transition: 0.3s;
+            }
+
+            &:checked::before {
+              transform: scale(1);
+              opacity: 1;
+            }
+
+            &:checked + label {
+              opacity: 1;
+            }
           }
 
           label {
+            cursor: $cursor;
             margin-right: 15px;
             font-size: 9px;
             font-weight: $semibold;
+            opacity: 0.5;
+            transition: 0.3s
           }
         }
       }
@@ -128,6 +170,7 @@
         width: 100%;
         min-height: 57px;
         background: $green;
+        cursor: $cursor;
       }
     }
   }
@@ -161,10 +204,14 @@
 
     .social-icons {
       width: 600px;
-      font-size: 2rem;
+      font-size: 35px;
       opacity: 0.65;
       color: $orange;
-      cursor: pointer;
+      cursor: default;
+
+      i {
+        cursor: $cursor;
+      }
     }
 
   }

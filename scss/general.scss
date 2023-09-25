@@ -5,6 +5,12 @@
   font-family: $font;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 72px;
+  scroll-snap-type: y proximity;
+}
+
 body {
   background: $black;
 }
