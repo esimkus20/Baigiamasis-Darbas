@@ -2,6 +2,7 @@
   height: 573px;
   background: $orange;
   @include flex-centered;
+  cursor: default;
 
   div {
     @include flex-centered;
@@ -37,6 +38,10 @@
         padding-bottom: 2px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.6);
         opacity: 0.8;
+
+        &:focus::placeholder {
+          opacity: 0;
+        }
 
         &::placeholder {
           font-size: 12px;
@@ -111,6 +116,11 @@
         width: 158px;
         height: 48px;
         cursor: $cursor;
+        transition: 0.3s;
+
+        &:hover {
+          background: #2e976b;
+        }
       }
     }
   }

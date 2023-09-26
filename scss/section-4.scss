@@ -1,6 +1,7 @@
 .section-4 {
   height: 592px;
   background: $white;
+  cursor: default;
 
   div {
     @include flex-centered;

@@ -2,6 +2,7 @@ footer {
   height: 123px;
   background: $black;
   @include flex-centered;
+  cursor: default;
 
   div {
     @include flex-space-between;
@@ -13,6 +14,11 @@ footer {
 
       i {
         cursor: $cursor;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 0.65;
+        }
       }
     }
 
@@ -20,6 +26,22 @@ footer {
       color: $white;
       font-size: 18px;
       opacity: 0.5;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 920px) {
+  footer {
+
+    div {
+
+      .social-icons {
+        width: auto;
+
+        i {
+          padding: 0 25px;
+        }
+      }
     }
   }
 }

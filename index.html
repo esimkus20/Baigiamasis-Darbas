@@ -53,18 +53,19 @@
         <h1>Try Your <span>FREE</span> Trial Today</h1>
         <form action="#">
           <h3>Your details</h3>
-          <input type="text" placeholder="First name">
-          <input type="text" placeholder="Last name">
-          <input type="number" placeholder="Phone number">
+          <input id="firstName" name="sign-up" type="text" placeholder="First name">
+          <input id="surname" name="sign-up" type="text" placeholder="Last name">
+          <input id="number" name="sign-up" type="number" placeholder="Phone number">
           <h3 class="tos">Type of subscription</h3>
           <div class="type-of-subscription">
-            <input type="radio" id="monthly" name="type_of_subscription" value="Monthly">
+            <input type="radio" id="monthly" name="sign-up" value="Monthly">
             <label for="monthly">MONTHLY</label>
-            <input type="radio" id="yearly" name="type_of_subscription" value="Yearly">
+            <input type="radio" id="yearly" name="sign-up" value="Yearly">
             <label for="yearly">YEARLY</label>
           </div>
+          <!-- <input id="submit" name="sign-up" type="submit"> -->
         </form>
-        <a href="#">GET STARTED</a>
+        <a type="submit">GET STARTED</a>
       </div>
     </div>
   </section>
@@ -412,5 +413,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/burger.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

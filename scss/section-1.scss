@@ -4,6 +4,7 @@
   box-sizing: content-box;
   padding: 105.5px 0;
   height: 639px;
+  cursor: default;
 
   &::before {
     content: "";
@@ -100,6 +101,10 @@
           width: 100%;
           border-bottom: 1px solid #D8D8D8;
 
+          &:focus::placeholder {
+            opacity: 0;
+          }
+
           &:focus {
             opacity: 1;
           }
@@ -180,6 +185,11 @@
         min-height: 57px;
         background: $green;
         cursor: $cursor;
+        transition: 0.3s;
+
+        &:hover {
+          background: #2e976b;
+        }
       }
     }
   }
@@ -213,13 +223,18 @@
     .social-icons {
       width: 41%;
       font-size: 35px;
-      opacity: 0.65;
       color: $orange;
       cursor: default;
 
       i {
+        opacity: 0.65;
         padding: 0 10px;
         cursor: $cursor;
+        transition: 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
 

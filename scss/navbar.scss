@@ -13,6 +13,11 @@ nav {
   
     img {
       cursor: $cursor;
+      transition: 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
     }
   
     .links {
@@ -20,16 +25,35 @@ nav {
       width: 500px;
       list-style: none;
 
-      li>a {
-        color: $white;
-        text-decoration: none;
-        opacity: 0.69;
+      li {
+        
+        &::after {
+          content: '';
+          width: 0%;
+          position: relative;
+          top: 25px;
+          border-radius: 5px;
+          height: 3px;
+          background: $orange;
+          display: block;
+          margin: auto;
+          transition: 0.5s;
+        }
 
-        &:hover {
-          cursor: $cursor;
-          padding-bottom: 24px;
-          border-bottom: 2px solid $orange;
-          opacity: 1;
+        &:hover::after {
+          width: 100%;
+        }
+
+        a {
+          color: $white;
+          text-decoration: none;
+          opacity: 0.69;
+          transition: 0.3s;
+  
+          &:hover {
+            cursor: $cursor;
+            opacity: 1;
+          }
         }
       }
     }
@@ -50,6 +74,7 @@ nav {
     display: flex;
     background: $black;
     flex-direction: column;
+    padding: 0;
     padding-top: 72px;
     width: 100%;
     transition: 0.5s;

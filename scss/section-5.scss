@@ -2,12 +2,14 @@
   height: 883px;
   background: #6696E2;
   @include flex-centered;
+  cursor: default;
 
   div {
     @include flex-centered;
     flex-direction: column;
     justify-content: flex-start;
     height: 80%;
+    width: 100%;
 
     .title {
       h1 {
