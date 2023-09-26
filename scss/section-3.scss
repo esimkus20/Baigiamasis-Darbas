@@ -1,7 +1,9 @@
 .section-3 {
+  width: 100%;
   height: 596px;
 
   div {
+    width: 100%;
     height: 100%;
     @include flex-centered;
 
@@ -16,10 +18,10 @@
       flex-direction: column;
       align-items: flex-start;
       color: $white;
+      gap: 10px;
 
       hr {
         border-color: $orange;
-        background: red;
         margin: 30px 0;
       }
 
@@ -37,7 +39,9 @@
 
       .content-box {
         justify-content: flex-start;
+        flex-direction: row;
         gap: 20px;
+        margin-top: 10px;
 
         .icon {
           width: 50px;
@@ -52,6 +56,46 @@
           
           h3 {
             font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .section-3 {
+    height: auto;
+    div {
+      flex-direction: column;
+      .half {
+        padding-bottom: 30px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .content {
+        @include flex-centered;
+        width: 100%;
+
+        h1 {
+          text-align: center;
+          width: 100%;
+        }
+
+        p {
+          width: 100%;
+          text-align: justify;
+          padding-bottom: 20px;
+        }
+
+        .content-box {
+          width: 100%;
+
+          .icon {
+            width: 60px;
           }
         }
       }

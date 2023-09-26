@@ -87,3 +87,20 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .section-6 {
+
+    div {
+      width: 100%;
+
+      h1 {
+        font-size: 25px;
+        text-align: center;
+      }
+
+      .all-feedbacks {
+      }
+    }
+  }
+}

@@ -132,3 +132,65 @@
     }
   }
 }
+
+@media (max-width: 1050px) {
+  .section-2 {
+    height: auto;
+    
+    div {
+      flex-direction: column;
+
+      .grid-1 {
+        width: auto;
+        padding-right: 10px;
+        gap: 50px;
+        margin: 10px;
+        padding-left: 10px;
+        grid-template-columns: 100px 100px 100px;
+      }
+
+      .content {
+
+        p {
+
+          &:nth-last-of-type(odd) {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-2 {
+
+    div {
+      width: 100%;
+
+      .grid-1 {
+        width: 100%;
+        gap: 0;
+      }
+
+      .content {
+        width: 100%;
+
+        h1 {
+          width: 100%;
+          text-align: center;
+          font-size: 32px;
+        }
+
+        p {
+          width: 100%;
+          text-align: justify;
+        }
+      }
+
+      .grid-2 {
+        width: auto;
+      }
+    }
+  }
+}

@@ -90,6 +90,8 @@
 .swiper-button-next {
   display: none;
   color: $orange;
+  width: auto;
+  margin: -50px -10px;
 }
 
 @media (max-width: 768px) {

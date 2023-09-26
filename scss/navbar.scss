@@ -1,4 +1,5 @@
 nav {
+  @include flex-centered;
   position: fixed;
   width: 100%;
   background: $black;
@@ -6,6 +7,7 @@ nav {
 
   div {
     @include flex-space-between;
+    margin: 0 auto !important;
     width: 100%;
     height: 72px;
   
@@ -13,27 +15,85 @@ nav {
       cursor: $cursor;
     }
   
-    ul {
+    .links {
       @include flex-space-between;
       width: 500px;
       list-style: none;
-  
-      li {
-  
-        a {
-          color: $white;
-          text-decoration: none;
-          opacity: 0.69;
-  
-          &:hover {
-            cursor: $cursor;
-            padding-bottom: 24px;
-            border-bottom: 2px solid $orange;
-            opacity: 1;
-          }
+
+      li>a {
+        color: $white;
+        text-decoration: none;
+        opacity: 0.69;
+
+        &:hover {
+          cursor: $cursor;
+          padding-bottom: 24px;
+          border-bottom: 2px solid $orange;
+          opacity: 1;
         }
-  
       }
     }
+    #burger {
+      display: none;
+      font-size: 2rem;
+      color: white;
+    }
+  }
+}
+
+.links2 {
+  transform: translateY(-81%);
+  position: fixed;
+  width: 100%;
+  z-index: 98;
+  div {
+    display: flex;
+    background: $black;
+    flex-direction: column;
+    padding-top: 72px;
+    width: 100%;
+    transition: 0.5s;
+    // display: none;
+
+    a {
+      color: white;
+      font-weight: $semibold;
+      font-size: 2rem;
+    }
+
+    a:nth-of-type(even) {
+      @include flex-centered;
+      width: 100%;
+      padding: 10px 0;
+      text-decoration: none;
+      background: #222222;
+    }
+
+    a:nth-of-type(odd) {
+      @include flex-centered;
+      width: 100%;
+      padding: 10px 0;
+      text-decoration: none;
+      background: #171717;
+    }
+  }
+}
+
+.translate {
+  transform: translateY(81%);
+}
+
+.rotate {
+  transform: rotate(-90deg);
+}
+
+// Burger
+@media (max-width: 768px) {
+  nav>div>.links {
+    display: none;
+  }
+
+  nav>div>#burger {
+    display: block;
   }
 }

@@ -6,6 +6,7 @@
     @include flex-centered;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 
     .title {
       h1 {
@@ -49,6 +50,36 @@
           border: 1px solid $orange;
           color: $orange;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-4 {
+    height: auto;
+    
+    div {
+      margin-bottom: 0;
+
+      .title {
+
+        h1 {
+          text-align: center;
+          width: 100%;
+          padding-top: 25px;
+          font-size: 29px;
+        }
+        
+        p {
+          font-size: 18px;
+          text-align: justify;
+          padding-bottom: 50px;
+        }
+      }
+
+      .features {
+        flex-direction: column;
       }
     }
   }

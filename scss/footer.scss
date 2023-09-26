@@ -23,3 +23,19 @@ footer {
     }
   }
 }
+
+@media (max-width: 768px) {
+
+  footer {
+    
+    div {
+      flex-direction: column;
+
+      .social-icons {
+        flex-direction: row;
+        width: 100%;
+        padding: 10px 0;
+      }
+    }
+  }
+}

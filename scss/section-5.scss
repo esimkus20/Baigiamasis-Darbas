@@ -95,3 +95,32 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .section-5 {
+    height: auto;
+
+    div {
+      height: 100%;
+
+      .title {
+
+        h1 {
+          padding-top: 20px;
+        }
+        
+        p {
+          text-align: justify;
+          font-size: 20px;
+          padding: 0 10px;
+          padding-bottom: 30px;
+        }
+      }
+
+      .prices {
+        padding: 0;
+        flex-direction: column;
+      }
+    }
+  }
+}

@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!-- Icon -->
+  <link rel="icon" href="app/images/tab-icon.png">
   <!-- Title -->
   <title>Baigiamasis Darbas</title>
   <!-- Custom Styles -->
@@ -17,15 +19,26 @@
   <nav>
     <div class="wrapper">
       <a href="#"><img src="app/svgs/navbar.svg" alt="Cheshire Country Logo"></a>
-      <ul>
+      <ul class="links">
         <li><a href="#features">Features</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <i id="burger" class="fa-solid fa-bars"></i>
     </div>
   </nav>
+
+  <div class="links2">
+    <div id="links2" class="wrapper">
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a> 
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
 
   <section class="section-1">
     <div class="wrapper">
@@ -240,11 +253,8 @@
     <div class="wrapper">
       <h1>WHAT OUR CUSTOMERS ARE SAYING</h1>
       <hr width="60px">
-      <!-- Slider main container -->
       <div class="swiper">
-        <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
-          <!-- Slides -->
           <div class="swiper-slide">
             <div class="feedback">
               <div class="comment">
@@ -301,53 +311,69 @@
               </div>
             </div>
           </div>
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>Susan W.</h2>
+                  <p>Photographer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>John S.</h2>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>Susan W.</h2>
+                  <p>Photographer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="feedback">
+              <div class="comment">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
+              </div>
+              <div class="profile">
+                <div class="img"></div>
+                <div class="info">
+                  <h2>John S.</h2>
+                  <p>Freelancer</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- If we need pagination -->
         <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
       </div>
-      <!-- <div class="all-feedbacks">
-        <div class="feedback">
-          <div class="comment">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
-          </div>
-          <div class="profile">
-            <div class="img"></div>
-            <div class="info">
-              <h2>Jeremy H.</h2>
-              <p>Manager</p>
-            </div>
-          </div>
-        </div>
-        <div class="feedback">
-          <div class="comment">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita.</p>
-          </div>
-          <div class="profile">
-            <div class="img"></div>
-            <div class="info">
-              <h2>John S.</h2>
-              <p>Freelancer</p>
-            </div>
-          </div>
-        </div>
-        <div class="feedback">
-          <div class="comment">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus accusamus expedita repellat similique odio aspernatur ex.</p>
-          </div>
-          <div class="profile">
-            <div class="img"></div>
-            <div class="info">
-              <h2>Susan W.</h2>
-              <p>Photographer</p>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </section>
 
@@ -385,5 +411,6 @@
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="js/swiper.js"></script>
+  <script src="js/burger.js"></script>
 </body>
 </html>

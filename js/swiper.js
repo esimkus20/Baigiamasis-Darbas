@@ -3,9 +3,6 @@ const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
 
-  // Default parameters
-  slidesPerView: 3,
-
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
@@ -17,14 +14,25 @@ const swiper = new Swiper('.swiper', {
     prevEl: '.swiper-button-prev',
   },
 
-  // autoplay: {
-  //   delay: 3000,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
-  // breakpoints: {
-  //   1000: {
-  //     slidesPerView: 3,
-  //     slidesPerGroup: 3
-  //   }
-  // }
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+    },
+
+    1050: {
+      slidesPerView: 3,
+      slidesPerGroup: 2,
+    }
+  }
 });

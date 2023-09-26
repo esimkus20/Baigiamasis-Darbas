@@ -2,7 +2,7 @@
   @include flex-centered;
   position: relative;
   box-sizing: content-box;
-  padding: 105.5px;
+  padding: 105.5px 0;
   height: 639px;
 
   &::before {
@@ -25,16 +25,18 @@
       flex-direction: column;
       width: 651px;
       height: 425px;
+      margin-right: 20px;
 
       h1 {
         color: $white;
-        width: 430px;
+        width: 100%;
         padding: 20px 0;
         font-size: 2.25rem;
         line-height: 43.2px;
       }
 
       p {
+        width: 100%;
         font-weight: $semibold;
         color: $white;
         padding: 40px 0;
@@ -49,6 +51,13 @@
         color: $white;
         background: none;
         border: 2px solid $white;
+        transition: 0.3s;
+
+        &:hover {
+          background: $white;
+          color: $black;
+          font-weight: $semibold;
+        }
       }
     }
 
@@ -90,7 +99,6 @@
           outline: none;
           width: 100%;
           border-bottom: 1px solid #D8D8D8;
-          opacity: 0.5;
 
           &:focus {
             opacity: 1;
@@ -110,6 +118,7 @@
         }
 
         .type-of-subscription {
+          flex-direction: row;
 
           input[type="radio"] {
             cursor: $cursor;
@@ -178,7 +187,6 @@
 
 .section-1-footer {
   @include flex-centered;
-  gap: 100px;
   height: 105px;
   background: $white;
 
@@ -203,16 +211,104 @@
     }
 
     .social-icons {
-      width: 600px;
+      width: 41%;
       font-size: 35px;
       opacity: 0.65;
       color: $orange;
       cursor: default;
 
       i {
+        padding: 0 10px;
         cursor: $cursor;
       }
     }
 
+  }
+}
+
+@media (max-width: 1050px) {
+
+  .section-1 {
+    height: auto;
+
+    div {
+      flex-direction: column;
+
+      .content {
+        margin: 0;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+
+        h1 {
+          text-align: center;
+        }
+
+        br {
+          display: none;
+        }
+
+        p {
+          text-align: justify;
+        }
+      }
+    }
+  }
+
+  .section-1-footer {
+    div {
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section-1 {
+    div {
+      .content {
+        height: auto;
+        h1 {
+          font-size: 30px;
+        }
+
+        br {
+          display: block;
+        }
+
+        p {
+          font-size: 16px;
+        }
+
+        button {
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+
+  .section-1-footer {
+    height: auto;
+
+    div {
+      flex-direction: column;
+
+      .social {
+        align-items: center;
+        padding: 10px;
+
+        p {
+          width: 100%;
+          font-size: 15px;
+          text-align: justify;
+        }
+      }
+
+      .social-icons {
+        padding: 10px;
+        width: 100%;
+        flex-direction: row;
+      }
+    }
   }
 }
