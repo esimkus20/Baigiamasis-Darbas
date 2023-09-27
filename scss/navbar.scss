@@ -7,9 +7,9 @@ nav {
 
   div {
     @include flex-space-between;
-    margin: 0 auto !important;
     width: 100%;
     height: 72px;
+    margin: 0 auto !important;
   
     img {
       cursor: $cursor;
@@ -29,14 +29,14 @@ nav {
         
         &::after {
           content: '';
-          width: 0%;
-          position: relative;
-          top: 25px;
-          border-radius: 5px;
-          height: 3px;
-          background: $orange;
           display: block;
+          position: relative;
+          width: 0%;
+          height: 3px;
+          top: 25px;
           margin: auto;
+          border-radius: 5px;
+          background: $orange;
           transition: 0.5s;
         }
 
@@ -59,29 +59,28 @@ nav {
     }
     #burger {
       display: none;
-      font-size: 2rem;
       color: white;
+      font-size: 2rem;
     }
   }
 }
 
 .links2 {
-  transform: translateY(-81%);
   position: fixed;
   width: 100%;
+  transform: translateY(-100%);
   z-index: 98;
+
   div {
     display: flex;
-    background: $black;
     flex-direction: column;
-    padding: 0;
-    padding-top: 72px;
     width: 100%;
+    padding: 72px 0 0 0;
+    background: $black;
     transition: 0.5s;
-    // display: none;
 
     a {
-      color: white;
+      color: $white;
       font-weight: $semibold;
       font-size: 2rem;
     }
@@ -105,7 +104,7 @@ nav {
 }
 
 .translate {
-  transform: translateY(81%);
+  transform: translateY(100%);
 }
 
 .rotate {

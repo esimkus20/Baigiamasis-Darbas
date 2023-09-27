@@ -1,9 +1,9 @@
 .section-1 {
   @include flex-centered;
   position: relative;
-  box-sizing: content-box;
-  padding: 105.5px 0;
   height: 639px;
+  padding: 105.5px 0;
+  box-sizing: content-box;
   cursor: default;
 
   &::before {
@@ -66,23 +66,23 @@
       display: flex;
       flex-direction: column;
       height: 425px;
-      border-radius: 5px;
       width: 360px;
+      border-radius: 5px;
       background: $white;
 
       h1 {
         display: flex;
         align-items: center;
-        font-size: 19px;
-        padding: 0 50px;
-        border-radius: 5px 5px 0 0;
         width: 100%;
         min-height: 57px;
+        padding: 0 50px;
+        font-size: 19px;
+        border-radius: 5px 5px 0 0;
         background: #F5F5F5;
 
         span {
-          color: $orange;
           padding: 0 6px;
+          color: $orange;
         }
       }
 
@@ -90,6 +90,7 @@
         display: flex;       
         flex-direction: column;
         align-items: flex-start;
+        position: relative;
         width: 100%;
         height: 100%;
         padding: 25px 50px;
@@ -172,23 +173,29 @@
             transition: 0.3s
           }
         }
-      }
 
-      a {
-        @include flex-centered;
-        font-weight: $semibold;
-        text-decoration: none;
-        font-size: 1.125rem;
-        color: $white;
-        border-radius: 0 0 5px 5px;
-        width: 100%;
-        min-height: 57px;
-        background: $green;
-        cursor: $cursor;
-        transition: 0.3s;
-
-        &:hover {
-          background: #2e976b;
+        input[type="submit"] {
+          @include flex-centered;
+          font-weight: $semibold;
+          text-decoration: none;
+          font-size: 1.125rem;
+          color: $white;
+          border-radius: 0 0 5px 5px;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          border-bottom: 1px solid $green;
+          position: absolute;
+          padding: 0;
+          min-height: 57px;
+          background: $green;
+          cursor: $cursor;
+          transition: 0.3s;
+  
+          &:hover {
+            border-bottom: 1px solid #2e976b;
+            background: #2e976b;
+          }
         }
       }
     }

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Swiper JS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
   <!-- Icon -->
@@ -16,7 +18,9 @@
 </head>
 <body>
   
-  <nav>
+  <nav 
+  data-aos="slide-right" 
+  data-aos-duration="800">
     <div class="wrapper">
       <a href="#"><img src="app/svgs/navbar.svg" alt="Cheshire Country Logo"></a>
       <ul class="links">
@@ -40,48 +44,52 @@
     </div>
   </div>
 
-  <section class="section-1">
+  <section class="section-1"
+  data-aos="slide-down" 
+  data-aos-duration="800">
     <div class="wrapper">
       <div class="content">
         <img src="app/svgs/section-1.svg" alt="Cheshire Country Logo">
         <h1>Explained propriety <br>of out perpetual to you</h1>
         <hr width="75" size="4" color="white">
         <p>Insipidity the sufficient discretion imprudence resolution sir him decisively. Proceed how any engaged visitor. Explained propriety of out perpetual his you. Feel sold off felt nay rose met you. We so entreaties cultivated astonished is.</p>
-        <button>DOWNLOAD</button>
+        <a href="https://en.wikipedia.org/wiki/Download" target="_blank"><button>DOWNLOAD</button></a>
       </div>
       <div class="sign-in">
         <h1>Try Your <span>FREE</span> Trial Today</h1>
-        <form action="#">
+        <form id="getStarted" action="#">
           <h3>Your details</h3>
-          <input id="firstName" name="sign-up" type="text" placeholder="First name">
-          <input id="surname" name="sign-up" type="text" placeholder="Last name">
-          <input id="number" name="sign-up" type="number" placeholder="Phone number">
+          <input id="firstName" name="firstName" type="text" placeholder="First name">
+          <input id="surname" name="surname" type="text" placeholder="Last name">
+          <input id="number" name="number" type="number" placeholder="Phone number">
           <h3 class="tos">Type of subscription</h3>
           <div class="type-of-subscription">
-            <input type="radio" id="monthly" name="sign-up" value="Monthly">
+            <input type="radio" id="monthly" name="monthly/yearly" value="Monthly">
             <label for="monthly">MONTHLY</label>
-            <input type="radio" id="yearly" name="sign-up" value="Yearly">
+            <input type="radio" id="yearly" name="monthly/yearly" value="Yearly">
             <label for="yearly">YEARLY</label>
           </div>
-          <!-- <input id="submit" name="sign-up" type="submit"> -->
+          <input id="submit" value="GET STARTED" name="started" type="submit">
         </form>
-        <a type="submit">GET STARTED</a>
       </div>
     </div>
   </section>
 
-  <footer class="section-1-footer">
+  <footer class="section-1-footer"
+  data-aos="slide-left"
+  data-aos-anchor="#example-anchor"
+  data-aos-duration="800">
     <div class="wrapper">
       <div class="social">
         <h2>Social Media</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
       </div>
       <div class="social-icons">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-pinterest-p"></i>
-        <i><img width="30px" height="30px" src="app/images/wifi-icon.png" alt=""></i>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="https://www.speedtest.net/" target="_blank"><i><img width="30px" height="30px" src="app/images/wifi-icon.png" alt=""></i></a>
       </div>
     </div>
   </footer>
@@ -101,21 +109,21 @@
       <div class="grid-2">
 
         <div class="container">
-          <img class="img-1" src="app/images/section-2-grid-2-img-1.png" alt="leafes">
+          <img id="sound-1" class="img-1" src="app/images/section-2-grid-2-img-1.png" alt="leafes">
           <div class="middle">
             <div class="text">Explore</div>
           </div>
         </div>
 
         <div class="container">
-          <img class="img-2" src="app/images/section-2-grid-2-img-2.png" alt="vegetables">
+          <img id="sound-2" class="img-2" src="app/images/section-2-grid-2-img-2.png" alt="vegetables">
           <div class="middle">
             <div class="text">Vegan</div>
           </div>
         </div>
 
         <div class="container-2">
-          <img class="img-3" src="app/images/section-2-grid-2-img-3.png" alt="stairs">
+          <img id="sound-3" class="img-3" src="app/images/section-2-grid-2-img-3.png" alt="stairs">
           <div class="middle">
             <div class="text">Stairs</div>
           </div>
@@ -382,17 +390,17 @@
     <div class="wrapper">
       <h1>CONTACT US</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <form action="#">
-        <input type="text" placeholder="First name">
-        <input type="text" placeholder="Last name">
-        <input type="number" placeholder="Phone number">
+      <form id="contact-us" action="#">
+        <input id="firstName2" type="text" placeholder="First name">
+        <input id="lastName" type="text" placeholder="Last name">
+        <input id="number2" type="number" placeholder="Phone number">
         <div class="type">
           <input type="radio" id="personal" name="personal-company" value="Personal">
           <label for="personal">PERSONAL</label>
           <input type="radio" id="company" name="personal-company" value="Company">
           <label for="company">COMPANY</label>
         </div>
-        <button>SEND</button>
+        <input id="submit2" type="submit" value="SEND">
       </form>
     </div>
   </section>
@@ -400,19 +408,22 @@
   <footer>
     <div class="wrapper">
       <div class="social-icons">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-pinterest-p"></i>
-        <i><img width="20px" height="20px" src="app/images/wifi-icon.png" alt=""></i>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="https://www.speedtest.net/" target="_blank"><i><img width="20px" height="20px" src="app/images/wifi-icon.png" alt=""></i></a>
       </div>
       <p>© 2019 Cheshire County</p>
     </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/swiper.js"></script>
   <script src="js/burger.js"></script>
+  <script src="js/form-1.js"></script>
+  <script src="js/form-2.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
