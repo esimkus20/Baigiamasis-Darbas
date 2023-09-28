@@ -63,7 +63,7 @@ form1.addEventListener("submit", function(event) {
       "<p>Last Name: <b>" + surname + "</b></p><br>" +
       "<p>Phone Number: <b>" + phoneNumber + "</b></p><br>" +
       "<p>Subscription Type: <b>" + (monthlySubscription.checked ? "Monthly" : "Yearly") + "</b></p> <br><br>" +
-      "<h3>Thank you for submitting!</h3><br> <h2>You are definitely not getting hacked :)</h2>";
+      "<h3>Thank you for submitting!</h3><br>";
 
     // Replace the content of form1 with the submissionInfo for form1
     form1.innerHTML = submissionInfo.innerHTML;
